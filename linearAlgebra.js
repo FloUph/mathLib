@@ -22,7 +22,7 @@ function Vector(rows, unit) {
   return vector;
 }
 
-function Matrix(rows, cols) {
+function Matrix(rows, cols, unit) {
   this.rows = rows;
   this.cols = cols;
   this.unit = unit;
