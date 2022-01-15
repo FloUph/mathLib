@@ -2,33 +2,33 @@
 
 // Type Definitions
 
-function Scalar(value) { 
-  this.value = value;
-  
-  scalar = this.value
-  return scalar;
-}
-
-function Vector(rows) {
-  this.rows = rows;
-
-  vector = [];
-  for(let i=0; i < this.rows; i++){
-    vector[i] = 1;
+class Scalar {
+  constructor(value) {
+    this.value = value;
   }
-  return vector;
 }
 
-function Matrix(rows, cols) {
-  this.rows = rows;
-  this.cols = cols;
-  
-  matrix = [];
-  for(let i=0; i < rows; i++){
-    matrix[i] = [];
-    for(let j=0; j < cols; j++){
-      matrix[i][j] = 1;
+class Vector {
+  constructor(rows) {
+    this.rows = rows;
+    this.vector = [];
+
+    for(let i=0; i < this.rows; i++){
+      this.vector[i] = 1;
     }
   }
-  return matrix;
+}
+
+class Matrix {
+  constructor(rows, cols) {
+    this.rows = rows;
+    this.cols = cols;
+    this.matrix = [];
+    for(let i=0; i < rows; i++){
+      this.matrix[i] = [];
+      for(let j=0; j < cols; j++){
+        this.matrix[i][j] = 1;
+      }
+    }
+  }
 }
