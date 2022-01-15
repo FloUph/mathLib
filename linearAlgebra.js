@@ -2,8 +2,9 @@
 
 // Type Definitions
 
-function Scalar(value) { 
+function Scalar(value, unit) { 
   this.value = value;
+  this.unit = unit;
   
   scalar = this.value
   
@@ -19,4 +20,19 @@ function Vector(rows, unit) {
     vector[i] = 1;
   }
   return vector;
+}
+
+function Matrix(rows, cols) {
+  this.rows = rows;
+  this.cols = cols;
+  this.unit = unit;
+  
+  matrix = [];
+  for(let i=0; i < rows; i++){
+    matrix[i] = [];
+    for(let j=0; j < cols; j++){
+      matrix[i][j] = 1;
+    }
+  }
+  return matrix;
 }
